@@ -1,0 +1,45 @@
+<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>
+<script>
+    $(document).ready(
+        function() {
+            document.onselectstart = function() {
+                return false;
+            };
+
+            $(document).click(
+                function() {
+                    $("p").show(1500);
+                }
+            );
+
+            $("p").hide();
+            $("p").click(changeStyle);
+        }
+    );
+
+    function changeStyle() {
+        // $(this).hide(1000);
+
+        if (!$(this).hasClass("red bgyellow")) {
+            $(this).addClass("red bgyellow");
+        } else {
+            $(this).removeClass("red bgyellow");
+        }
+    }
+</script>
+
+<style>
+    .red {
+        color: red;
+    }
+    
+    .bgyellow {
+        background: yellow;
+    }
+</style>
+
+<p id="p1">123</p>
+<p id="p2">123</p>
+<p id="p3">123</p>
+<p id="p4">123</p>
+<p id="p5">123</p>
